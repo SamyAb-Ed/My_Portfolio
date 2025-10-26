@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
+import Services from "./pages/Services/Services";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 
@@ -33,7 +34,7 @@ function App() {
           </motion.div>
 
           <div className="nav-menu">
-            {["home", "about", "skills", "projects", "contact"].map(
+            {["home", "about", "skills", "services", "projects", "contact"].map(
               (section) => (
                 <button
                   key={section}
@@ -60,6 +61,9 @@ function App() {
         </section>
         <section id="skills">
           <Skills />
+        </section>
+        <section id="services">
+          <Services />
         </section>
         <section id="projects">
           <Projects />
