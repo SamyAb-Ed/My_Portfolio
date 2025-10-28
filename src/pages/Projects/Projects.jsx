@@ -40,7 +40,7 @@ const Projects = () => {
         "A sleek Apple-inspired website clone built with React and modern CSS",
       image: appleImg,
       github: "https://github.com/SamyAb-Ed/Apple-Clone",
-      live: "https://polite-mooncake-cefdfa.netlify.app/",
+      live: "https://apple-clone-beige-three.vercel.app/",
       technologies: ["React", "CSS3", "JavaScript", "Responsive Design"],
     },
     {
@@ -49,7 +49,7 @@ const Projects = () => {
         "A full-stack discussion platform inspired by Evangadi, built using React, Node.js, Express, and MySQL. Supports user authentication, question posting, and community-based Q&A interactions.",
       image: evangadiImg,
       github: "https://github.com/SamyAb-Ed/Evangadi-Forum-Final",
-      live: "https://evangadi-for.netlify.app/",
+      live: "https://evangadi-forum-final-v2.vercel.app/",
       technologies: ["React", "MySQL", "Firebase", "Node.js", "Express"],
     },
   ];
