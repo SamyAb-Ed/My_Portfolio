@@ -15,7 +15,7 @@ const Projects = () => {
         "Full-stack e-commerce solution with React, Node.js and Firebase. Features include user authentication, payment processing, and admin dashboard.",
       image: amazonImg,
       github: "https://github.com/SamyAb-Ed/amazon-clone",
-      live: "https://68fd4d1cd22b698d081602fd--heroic-arithmetic-1a61a0.netlify.app/",
+      live: "https://amazon-clonnee.netlify.app/",
       technologies: [
         "React",
         "Node.js",
