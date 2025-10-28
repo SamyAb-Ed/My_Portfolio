@@ -30,7 +30,7 @@ const Projects = () => {
       description: "A movie streaming web app built with React and TMDB API",
       image: netflixImg,
       github: "https://github.com/SamyAb-Ed/Netflix-Clone-2025",
-      live: "https://bucolic-gingersnap-a01fe3.netlify.app/",
+      live: "https://meek-sherbet-22bffc.netlify.app/",
       technologies: ["React", "TMDB API", "CSS", "React Router"],
     },
 
