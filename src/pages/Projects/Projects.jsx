@@ -52,24 +52,6 @@ const Projects = () => {
       live: "https://sami-forum.carpnon.com/",
       technologies: ["React", "MySQL", "Firebase", "Node.js", "Express"],
     },
-    {
-      title: "Evangadi Food Menu",
-      description:
-        "A responsive food menu UI showcasing categories and items with clean layout and interactions.",
-      image: evangadiImg,
-      github: "https://github.com/SamyAb-Ed/Evangadi-food-menu.git",
-      live: "https://evangadi-food-menu.vercel.app",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    },
-    {
-      title: "Puppy Page",
-      description:
-        "A cute, responsive landing page for puppies with simple navigation and styling.",
-      image: evangadiImg,
-      github: "https://github.com/SamyAb-Ed/Puppy-Page.git",
-      live: "https://puppy-page-henna.vercel.app",
-      technologies: ["HTML", "CSS", "JavaScript"],
-    },
   ];
 
   return (
