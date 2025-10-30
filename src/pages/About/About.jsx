@@ -118,16 +118,22 @@ const About = () => {
             </p>
 
             <div className="about-actions">
-              <button className="btn btn-primary">
-                <FaDownload />
-                Download CV
-              </button>
-              <button
+              <a
                 className="btn btn-secondary"
-                onClick={() => setIsResumeOpen(true)}
+                href="/resume/Samuel_Worku_Resume.docx"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 View Resume
-              </button>
+              </a>
+              <a
+                className="btn btn-primary"
+                href="/resume/Samuel_Worku_Resume.docx"
+                download
+              >
+                <FaDownload />
+                Download CV
+              </a>
             </div>
           </motion.div>
         </div>
