@@ -195,6 +195,14 @@ const About = () => {
                   <div className="resume-section">
                     <h3>Professional Summary</h3>
                     <p>
+                      As a Full Stack Developer, proficient in designing and
+                      developing responsive, user-centric web applications using
+                      React, Node.js, Express, and SQL/NoSQL databases.
+                      Experienced in integrating RESTful APIs, implementing
+                      secure authentication flows, and deploying applications on
+                      cloud platforms such as Azure, Vercel, and Netlify.
+                    </p>
+                    <p>
                       Analytical and detail-oriented Full Stack Developer / Data
                       Analyst / Business Systems Analyst / SQL Server DBA with
                       over five years of combined experience in database
@@ -203,14 +211,6 @@ const About = () => {
                       business processes, implementing system enhancements, and
                       supporting full SDLC projects to optimize efficiency,
                       productivity, and scalability.
-                    </p>
-                    <p>
-                      As a Full Stack Developer, proficient in designing and
-                      developing responsive, user-centric web applications using
-                      React, Node.js, Express, and SQL/NoSQL databases.
-                      Experienced in integrating RESTful APIs, implementing
-                      secure authentication flows, and deploying applications on
-                      cloud platforms such as Azure, Vercel, and Netlify.
                     </p>
                   </div>
                   <div className="resume-section">
