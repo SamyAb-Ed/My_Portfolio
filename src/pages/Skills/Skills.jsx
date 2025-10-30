@@ -14,7 +14,7 @@ const css3Img =
 const bootstrapImg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg";
 const tailwindImg =
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg";
+  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain.svg";
 const jqueryImg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain.svg";
 const expressImg =
@@ -25,10 +25,13 @@ const gitImg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg";
 const githubImg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
-// Non-devicon placeholders
-const responsiveImg = "https://img.icons8.com/fluency/96/responsive.png";
-const apiImg = "https://img.icons8.com/fluency/96/api.png";
-const mediaQueryImg = "https://img.icons8.com/fluency/96/smartphone-tablet.png";
+// Non-devicon placeholders (embedded SVGs for reliability)
+const responsiveImg =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 24 24' fill='none' stroke='%234fd1c5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='3' width='14' height='10' rx='2'/%3E%3Cpath d='M22 13V7a2 2 0 0 0-2-2h-4'/%3E%3Crect x='7' y='17' width='7' height='4' rx='1'/%3E%3Cpath d='M5 21h11'/%3E%3C/svg%3E";
+const apiImg =
+  "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4bb.svg";
+const mediaQueryImg =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 24 24' fill='none' stroke='%23999cf9' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='13' height='9' rx='2'/%3E%3Crect x='7' y='16' width='6' height='4' rx='1'/%3E%3Cpath d='M19 10v7a2 2 0 0 1-2 2h-1'/%3E%3C/svg%3E";
 
 const Skills = () => {
   const skills = [
