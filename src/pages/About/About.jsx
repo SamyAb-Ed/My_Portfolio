@@ -15,13 +15,7 @@ import "./About.css";
 const About = () => {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
-  const openResumeViewer = () => {
-    const resumeUrl = `${window.location.origin}/resume/Samuel_Worku_Resume.docx`;
-    const viewerUrl = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(
-      resumeUrl
-    )}`;
-    window.open(viewerUrl, "_blank", "noopener,noreferrer");
-  };
+  // no-op viewer function removed to restore original modal behavior
 
   const experiences = [
     {
@@ -126,12 +120,15 @@ const About = () => {
             </p>
 
             <div className="about-actions">
-              <button className="btn btn-secondary" onClick={openResumeViewer}>
-                View Resume
-              </button>
-              <button className="btn btn-primary" onClick={openResumeViewer}>
+              <button className="btn btn-primary">
                 <FaDownload />
                 Download CV
+              </button>
+              <button
+                className="btn btn-secondary"
+                onClick={() => setIsResumeOpen(true)}
+              >
+                View Resume
               </button>
             </div>
           </motion.div>
