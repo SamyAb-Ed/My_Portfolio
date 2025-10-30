@@ -129,7 +129,8 @@ const About = () => {
               <a
                 className="btn btn-primary"
                 href="/resume/Samuel_Worku_Resume.docx"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaDownload />
                 Download CV
