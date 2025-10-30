@@ -7,6 +7,7 @@ import Skills from "./pages/Skills/Skills";
 import Services from "./pages/Services/Services";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
+import ChatBox from "./components/ChatBox/ChatBox";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -72,6 +73,9 @@ function App() {
           <Contact />
         </section>
       </main>
+
+      {/* AI Assistant ChatBox */}
+      <ChatBox />
     </div>
   );
 }
