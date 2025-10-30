@@ -13,8 +13,7 @@ const css3Img =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg";
 const bootstrapImg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg";
-const tailwindImg =
-  "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain.svg";
+const tailwindImg = "/icons/tailwind.svg";
 const jqueryImg =
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain.svg";
 const expressImg =
