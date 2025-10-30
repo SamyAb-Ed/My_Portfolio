@@ -15,6 +15,14 @@ import "./About.css";
 const About = () => {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
+  const openResumeViewer = () => {
+    const resumeUrl = `${window.location.origin}/resume/Samuel_Worku_Resume.docx`;
+    const viewerUrl = `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(
+      resumeUrl
+    )}`;
+    window.open(viewerUrl, "_blank", "noopener,noreferrer");
+  };
+
   const experiences = [
     {
       title: "Senior Full Stack Developer",
@@ -118,23 +126,13 @@ const About = () => {
             </p>
 
             <div className="about-actions">
-              <a
-                className="btn btn-secondary"
-                href="/resume/Samuel_Worku_Resume.docx"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <button className="btn btn-secondary" onClick={openResumeViewer}>
                 View Resume
-              </a>
-              <a
-                className="btn btn-primary"
-                href="/resume/Samuel_Worku_Resume.docx"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              </button>
+              <button className="btn btn-primary" onClick={openResumeViewer}>
                 <FaDownload />
                 Download CV
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>
