@@ -8,7 +8,6 @@ import {
   FaEnvelope as FaMail,
 } from "react-icons/fa";
 import "./Home.css";
-import SamImg from "../../assets/images/Sam.png";
 
 const Home = () => {
   return (
@@ -16,15 +15,11 @@ const Home = () => {
       <div className="hero">
         <div className="container">
           <motion.div
-            className="hero-grid"
+            className="hero-content"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="hero-photo">
-              <img src={SamImg} alt="Samuel Worku" />
-            </div>
-            <div className="hero-content">
             <motion.div
               className="typing-animation"
               initial={{ opacity: 0, y: 30 }}
@@ -96,7 +91,6 @@ const Home = () => {
                 <FaMail />
               </a>
             </motion.div>
-            </div>
           </motion.div>
         </div>
 
