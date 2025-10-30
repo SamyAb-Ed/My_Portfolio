@@ -48,8 +48,8 @@ const Projects = () => {
       description:
         "A full-stack discussion platform inspired by Evangadi, built using React, Node.js, Express, and MySQL. Supports user authentication, question posting, and community-based Q&A interactions.",
       image: evangadiImg,
-      github: "https://github.com/SamyAb-Ed/Evangadi-Forum-Final",
-      live: "https://evangadi-forum-final-v2.vercel.app/",
+      github: "https://github.com/SamyAb-Ed/Sami-Evangadi-Forum.git",
+      live: "https://sami-forum.carpnon.com/",
       technologies: ["React", "MySQL", "Firebase", "Node.js", "Express"],
     },
   ];
