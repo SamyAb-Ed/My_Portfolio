@@ -52,6 +52,15 @@ const Projects = () => {
       live: "https://sami-forum.carpnon.com/",
       technologies: ["React", "MySQL", "Firebase", "Node.js", "Express"],
     },
+    {
+      title: "Evangadi Food Menu",
+      description:
+        "A modern food menu web application showcasing Ethiopian cuisine. Built with React and Vite, featuring a responsive design with beautiful food cards displaying menu items, prices, and descriptions.",
+      image: evangadiImg,
+      github: "https://github.com/SamyAb-Ed/Evangadi-food-menu",
+      live: "https://evangadi-food-menu.vercel.app/",
+      technologies: ["React", "Vite", "CSS3", "JavaScript"],
+    },
   ];
 
   return (
