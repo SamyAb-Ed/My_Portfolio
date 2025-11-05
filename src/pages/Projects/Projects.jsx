@@ -6,7 +6,8 @@ import amazonImg from "./Img/10002.jpg";
 import netflixImg from "./Img/10001.jpg";
 import appleImg from "./Img/10003.png";
 import evangadiImg from "./Img/10004.jpg";
-import diamondTradingImg from "./Img/diamond-trading.jpg";
+import evangadiFoodMenuImg from "./Img/evangadi-food-menu.png";
+import diamondTradingImg from "./Img/diamond-trading-logo.png";
 
 const Projects = () => {
   const projects = [
@@ -57,7 +58,7 @@ const Projects = () => {
       title: "Evangadi Food Menu",
       description:
         "A modern food menu web application showcasing Ethiopian cuisine. Built with React and Vite, featuring a responsive design with beautiful food cards displaying menu items, prices, and descriptions.",
-      image: evangadiImg,
+      image: evangadiFoodMenuImg,
       github: "https://github.com/SamyAb-Ed/Evangadi-food-menu",
       live: "https://evangadi-food-menu.vercel.app/",
       technologies: ["React", "Vite", "CSS3", "JavaScript"],
