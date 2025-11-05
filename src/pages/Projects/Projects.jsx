@@ -6,6 +6,7 @@ import amazonImg from "./Img/10002.jpg";
 import netflixImg from "./Img/10001.jpg";
 import appleImg from "./Img/10003.png";
 import evangadiImg from "./Img/10004.jpg";
+import diamondTradingImg from "./Img/diamond-trading.jpg";
 
 const Projects = () => {
   const projects = [
@@ -60,6 +61,21 @@ const Projects = () => {
       github: "https://github.com/SamyAb-Ed/Evangadi-food-menu",
       live: "https://evangadi-food-menu.vercel.app/",
       technologies: ["React", "Vite", "CSS3", "JavaScript"],
+    },
+    {
+      title: "Diamond Trading PLC",
+      description:
+        "A professional corporate website for Diamond Trading PLC, a leading supplier of Dangote Cement and coffee husks in Ethiopia. Features include interactive sections, contact form, AI chat assistant, and responsive design showcasing the company's services and values.",
+      image: diamondTradingImg,
+      github: "https://github.com/SamyAb-Ed/Diamond-Trading-PLC",
+      live: "https://diamondtradingplc.com/",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Vite",
+        "AI Chat Assistant",
+        "Responsive Design",
+      ],
     },
   ];
 
