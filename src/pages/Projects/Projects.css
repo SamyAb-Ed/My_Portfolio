@@ -32,17 +32,10 @@
 
 .projects-grid {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  justify-content: space-between;
-  overflow-x: hidden;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
   width: 100%;
-}
-
-.projects-grid::-webkit-scrollbar {
-  display: none; /* WebKit */
 }
 
 .project-card {
@@ -51,10 +44,11 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
-  flex: 1;
+  flex: 0 0 calc(33.333% - 1rem);
   display: flex;
   flex-direction: column;
   height: 460px;
+  min-width: 280px;
 }
 
 .project-card:hover {
@@ -197,7 +191,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .project-card {
-    flex: 1;
+    flex: 0 0 calc(33.333% - 1rem);
   }
 }
 
