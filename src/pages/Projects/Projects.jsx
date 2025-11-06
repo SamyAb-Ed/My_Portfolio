@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
+import { useRef } from "react";
 import "./Projects.css";
 // Import project images from local Img folder
 import amazonImg from "./Img/10002.jpg";
@@ -10,6 +16,22 @@ import evangadiFoodMenuImg from "./Img/evangadi-food-menu.png";
 import diamondTradingImg from "./Img/diamond-trading-logo.png";
 
 const Projects = () => {
+  const scrollContainerRef = useRef(null);
+
+  const scrollProjects = (direction) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const cardWidth =
+        container.querySelector(".project-card")?.offsetWidth || 0;
+      const gap = 48; // 3rem = 48px
+      const scrollAmount = (cardWidth + gap) * 3; // Scroll by 3 projects
+      container.scrollBy({
+        left: direction === "next" ? scrollAmount : -scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const projects = [
     {
       title: "Amazon-Clone",
@@ -94,68 +116,84 @@ const Projects = () => {
           <p className="subtitle">Some of my recent work</p>
         </motion.div>
 
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              className="project-card"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-                <div className="project-overlay">
-                  <a
-                    href={project.github}
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub />
-                  </a>
-                  <a
-                    href={project.live}
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaExternalLinkAlt />
-                  </a>
+        <div className="projects-scroll-wrapper">
+          <button
+            className="scroll-button scroll-button-left"
+            onClick={() => scrollProjects("prev")}
+            aria-label="Scroll to previous projects"
+          >
+            <FaChevronLeft />
+          </button>
+          <div className="projects-grid" ref={scrollContainerRef}>
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                className="project-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="project-image">
+                  <img src={project.image} alt={project.title} />
+                  <div className="project-overlay">
+                    <a
+                      href={project.github}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub />
+                    </a>
+                    <a
+                      href={project.live}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaExternalLinkAlt />
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="project-technologies">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
+                <div className="project-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="project-technologies">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="tech-tag">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="project-links">
+                    <a
+                      href={project.live}
+                      className="project-btn btn-demo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaExternalLinkAlt /> Live Demo
+                    </a>
+                    <a
+                      href={project.github}
+                      className="project-btn btn-code"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub /> Code
+                    </a>
+                  </div>
                 </div>
-                <div className="project-links">
-                  <a
-                    href={project.live}
-                    className="project-btn btn-demo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
-                  <a
-                    href={project.github}
-                    className="project-btn btn-code"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub /> Code
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
+          <button
+            className="scroll-button scroll-button-right"
+            onClick={() => scrollProjects("next")}
+            aria-label="Scroll to next projects"
+          >
+            <FaChevronRight />
+          </button>
         </div>
       </div>
     </section>

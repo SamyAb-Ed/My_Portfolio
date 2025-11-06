@@ -30,11 +30,61 @@
   font-weight: 700;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+.projects-scroll-wrapper {
+  position: relative;
   margin-bottom: 4rem;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.projects-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.scroll-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.scroll-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.scroll-button-left {
+  left: -25px;
+}
+
+.scroll-button-right {
+  right: -25px;
 }
 
 .project-card {
@@ -45,6 +95,9 @@
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(30px);
+  flex: 0 0 calc(33.333% - 2rem);
+  min-width: 400px;
+  scroll-snap-align: start;
 }
 
 .project-card.visible {
@@ -270,9 +323,27 @@
 }
 
 @media (max-width: 968px) {
+  .project-card {
+    flex: 0 0 calc(50% - 1rem);
+    min-width: 350px;
+  }
+
   .projects-grid {
-    grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .scroll-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .scroll-button-left {
+    left: -20px;
+  }
+
+  .scroll-button-right {
+    right: -20px;
   }
 }
 
@@ -285,8 +356,12 @@
     padding: 0 1rem; /* Reduce padding so content doesn't get cut off */
   }
 
+  .project-card {
+    flex: 0 0 calc(100% - 1rem);
+    min-width: 280px;
+  }
+
   .projects-grid {
-    grid-template-columns: 1fr; /* Force single column */
     gap: 2rem; /* Reduce gap */
   }
 
@@ -296,5 +371,19 @@
 
   .project-links {
     flex-direction: column;
+  }
+
+  .scroll-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .scroll-button-left {
+    left: 5px;
+  }
+
+  .scroll-button-right {
+    right: 5px;
   }
 }
