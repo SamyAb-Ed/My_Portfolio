@@ -95,7 +95,7 @@
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(30px);
-  flex: 0 0 calc(33.333% - 2rem);
+  flex: 0 0 calc(50% - 1.5rem);
   min-width: 400px;
   scroll-snap-align: start;
 }

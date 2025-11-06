@@ -24,7 +24,7 @@ const Projects = () => {
       const cardWidth =
         container.querySelector(".project-card")?.offsetWidth || 0;
       const gap = 48; // 3rem = 48px
-      const scrollAmount = (cardWidth + gap) * 3; // Scroll by 3 projects
+      const scrollAmount = (cardWidth + gap) * 2; // Scroll by 2 projects
       container.scrollBy({
         left: direction === "next" ? scrollAmount : -scrollAmount,
         behavior: "smooth",
