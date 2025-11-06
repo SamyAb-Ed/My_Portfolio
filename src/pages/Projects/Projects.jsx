@@ -83,15 +83,16 @@ const Projects = () => {
   return (
     <section className="projects">
       <div className="container">
-        <motion.h2
-          className="section-title"
+        <motion.div
+          className="header"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Projects
-        </motion.h2>
+          <h2 className="title">Projects</h2>
+          <p className="subtitle">Some of my recent work</p>
+        </motion.div>
 
         <div className="projects-grid">
           {projects.map((project, index) => (
@@ -102,15 +103,24 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
             >
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
-                  <a href={project.github} className="project-link">
+                  <a
+                    href={project.github}
+                    className="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaGithub />
                   </a>
-                  <a href={project.live} className="project-link">
+                  <a
+                    href={project.live}
+                    className="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaExternalLinkAlt />
                   </a>
                 </div>
@@ -126,13 +136,21 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="project-links">
-                  <a href={project.github} className="project-link-text">
-                    <FaGithub />
-                    GitHub
+                  <a
+                    href={project.live}
+                    className="project-btn btn-demo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaExternalLinkAlt /> Live Demo
                   </a>
-                  <a href={project.live} className="project-link-text">
-                    <FaExternalLinkAlt />
-                    Live Demo
+                  <a
+                    href={project.github}
+                    className="project-btn btn-code"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub /> Code
                   </a>
                 </div>
               </div>
